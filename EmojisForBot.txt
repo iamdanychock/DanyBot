@@ -1,0 +1,11 @@
+Emojis for bot
+
+<:Vaggie:650059908955373597> = Vaggie
+<:Alastor:650048983426662411> = Alastor
+<:Angel_Dust:650048954095894549> = Angel dust
+<:Charlie:650059939699490827> = Charlie
+<:Cherri:650059971454566431> = Cherri
+<:Husk:650063020638208060> = Husk
+<:Katie:650046476008816650> = Katie
+<:Niffty:650063079429636096> = Niffty
+<:Sir_Pentious:650060721689722890> = Sir Pentious 

@@ -1,0 +1,102 @@
+import discord
+import asyncio
+import random
+
+
+client=discord.Client()
+
+@client.event
+async def on_ready():
+  await client.change_presence(status=discord.Status.idle, activity=discord.Game("Watching Helluva Boss??"))
+  print("Congrats!")
+  print("Logged in as :",client.user.name)
+  print("ID ;",client.user.id)
+##################################################################################################################""
+@client.event
+async def on_message(message):
+ if message.content==".ping":
+    await message.channel.send(":ping_pong:**Pong!**")
+
+ elif message.content==".credits":
+     await message.channel.send("Bot Created by :ribbon:@iamdanychock:ribbon:")
+     await message.channel.send("Version 2.0")
+
+ elif message.content==".help":
+    await message.channel.send(" +====-Liste De Commandes-====+")
+    await message.channel.send(".help : Affiche les commandes")
+    await message.channel.send(".ping : Pong")
+    await message.channel.send(".credits : Bah les crédits")
+
+ elif message.content==".hazbinquotes":
+       list = ["C'est sur.",
+               'Oui, absolument.',
+               'Sans aucun doute.',
+               'Of course.',
+               'Tu peux y compter.',
+               'Probablement.',
+               'Favorablement oui.',
+               'Oui.',
+               'Les signes indiquent que oui.',
+               'Réponse floue, réessaye.',
+               'Réessaye.',
+               'Tu ne voudrais pas le savoir.',
+               'Flemme.',
+               "N'y compte même pas.",
+               'Ma réponse est non',
+               'Ta mère dit que non',
+               'Non.',]
+    await message.channel.send(inst.choices(list))
+
+###############################################################################
+@client.event
+async def on_raw_reaction_add(payload):
+    message_id = payload.message_id
+    if message_id == 649274572033490955:
+        guild_id = payload.guild_id
+        guild = discord.utils.find(lambda g : g.id == guild_id, client.guilds)
+
+        if payload.emoji.name == "much":
+            role = discord.utils.get(guild.roles, name='Angels')
+        elif payload.emoji.name == ":smiling_imp:":
+            role = discord.utils.get(guilds, name="Sinners")
+        else:
+            role = discord.utils.get(guild.roles, name=payload.emoji.name)
+
+        if role is not None:
+            member = discord.utils.find(lambda m : m.id == payload.user_id, guild.members)
+            if member is not None:
+                await member.add_roles(role)
+                print("done")
+            else:
+                print("Member not found.")
+        else:
+            print("Role not found.")
+
+
+@client.event
+async def on_raw_reaction_remove(payload):
+    message_id = payload.message_id
+    if message_id == 649274572033490955:
+        guild_id = payload.guild_id
+        guild = discord.utils.find(lambda g : g.id == guild_id, client.guilds)
+
+        if payload.emoji.name == "crown":
+            role = discord.utils.get(guild.roles, name="King")
+        elif payload.emoji.name == "ok_hand":
+            role = discord.utils.get(guilds, name="Sous-King")
+        else:
+            role = discord.utils.get(guild.roles, name=payload.emoji.name)
+
+        if role is not None:
+            member = discord.utils.find(lambda m : m.id == payload.user_id, guilds.members)
+            if member is not None:
+                await member.add_roles(role)
+                print("done")
+            else:
+                print("Member not found.")
+        else:
+            print("Role not found.")
+
+################################################################################
+
+client.run('NjI3NDUzODUxNDA2MDQxMTM5.XZBzUg.IGi5jn3o8L4UtQLhlFOcCwARqFs')
