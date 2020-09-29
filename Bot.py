@@ -106,4 +106,4 @@ Hazbin_Quotes = ["Hel...lo! May I speak now? <:Alastor:650048983426662411>", "De
 #####################################################################################################################
 
 
-client.run('NjI3NDUzODUxNDA2MDQxMTM5.XZBzUg.IGi5jn3o8L4UtQLhlFOcCwARqFs')
+client.run('NjI3NDUzODUxNDA2MDQxMTM5.XY837w.CCON0uQ0AoZ7ula8PwpTuMb5QeQ')
